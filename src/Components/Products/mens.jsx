@@ -1,5 +1,6 @@
 ﻿import React, { useEffect, useState } from 'react';
 import CartPage from "../../Pages/Cart/cart.jsx";
+import {useCart} from "../../contexts/CartContext.jsx";
 function MenProducts() {
     const [mensproducts, setMensProducts] = useState([]);
     const [cart, setCart] = useState([])

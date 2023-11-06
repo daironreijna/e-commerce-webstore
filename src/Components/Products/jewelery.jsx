@@ -1,7 +1,9 @@
 ﻿import React, { useEffect, useState } from 'react';
-
+import {useCart} from "../../contexts/CartContext.jsx";
+import CartPage from "../../Pages/Cart/cart.jsx";
 function JeweleryProducts() {
     const [jewelproducts, setJewelProducts] = useState([]);
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/jewelery')
