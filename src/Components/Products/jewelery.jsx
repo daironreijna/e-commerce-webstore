@@ -1,19 +1,15 @@
 ﻿import React, { useEffect, useState } from 'react';
-import {useCart} from "../../contexts/CartContext.jsx";
 import CartPage from "../../Pages/Cart/cart.jsx";
+import {useCart} from "../../contexts/CartContext.jsx";
 function JeweleryProducts() {
     const [jewelproducts, setJewelProducts] = useState([]);
-    const [cart, setCart] = useState([])
+    const { cart, addToCart } = useCart();
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/jewelery')
             .then((res) => res.json())
             .then((data) => setJewelProducts(data));
     }, []);
-
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
     
     return (
         <div>
@@ -29,6 +25,7 @@ function JeweleryProducts() {
                     </div>
                 ))}
             </div>
+            <CartPage cartItems={cart} /> {/* Render the CartPage component */}
         </div>
     );
 }

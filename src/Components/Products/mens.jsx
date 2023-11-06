@@ -3,18 +3,15 @@ import CartPage from "../../Pages/Cart/cart.jsx";
 import {useCart} from "../../contexts/CartContext.jsx";
 function MenProducts() {
     const [mensproducts, setMensProducts] = useState([]);
-    const [cart, setCart] = useState([])
-    
+    const { cart, addToCart } = useCart(); // Use the useCart hook
+
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/men\'s%20clothing')
             .then((res) => res.json())
             .then((data) => setMensProducts(data));
     }, []);
 
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
-    
+
     return (
         <div>
             <h2>Men's Clothing Products</h2>

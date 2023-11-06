@@ -3,17 +3,13 @@ import CartPage from "../../Pages/Cart/cart.jsx";
 import {useCart} from "../../contexts/CartContext.jsx";
 function WomenProducts() {
     const [womensproducts, setWomensproducts] = useState([]);
-    const [cart, setCart] = useState([])
+    const { cart, addToCart } = useCart();
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/women\'s%20clothing')
             .then((res) => res.json())
             .then((data) => setWomensproducts(data));
     }, []);
-
-    const addToCart = (product) => {
-        setCart([...cart, product]);
-    };
     
     return (
         <div>
@@ -29,6 +25,7 @@ function WomenProducts() {
                     </div>
                 ))}
             </div>
+            <CartPage cartItems={cart} /> {/* Render the CartPage component */}
         </div>
     );
 }
