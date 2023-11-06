@@ -14,23 +14,16 @@ import Hero from "./Components/Hero/hero"
 
 export default function App() {
   return (
-    <div>
-      <div>
-        <Hero />
-      </div>
-      <div className='overflow-hidden'>
-        <Router>
-          <CartProvider>
-            <Navbar />
-            <Routes>
-              <Route path='/' element={<Shop />} />
-              <Route path='/cart' element={<Cart />} />
-            </Routes>
-          </CartProvider>
-        </Router>
-
-      </div>
-
+    <div className='overflow-hidden'>
+            <Router>
+                <CartProvider>
+              {/*  <Navbar />*/}
+                <Routes>
+                    <Route path='/' element={<Shop />}/>
+                    <Route path='/cart' element={<Cart />}/>
+                </Routes>
+                </CartProvider>
+            </Router>
     </div>
   );
 };
