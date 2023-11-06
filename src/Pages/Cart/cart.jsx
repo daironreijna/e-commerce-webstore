@@ -1,5 +1,6 @@
 import React from 'react';
 import { useCart } from "../../contexts/CartContext.jsx";
+import {Link} from "react-router-dom";
 
 function CartPage() {
     const { cart, removeFromCart, updateCartItemQuantity } = useCart();
@@ -35,7 +36,11 @@ function CartPage() {
             </div>
             <h3>Total Quantity: {totalQuantity}</h3>
             <h3>Total Price: ${totalPrice.toFixed(2)}</h3>
+            <div>
+                <Link to="/">Back to Shop</Link>
+            </div>
         </div>
+        
     );
 }
 

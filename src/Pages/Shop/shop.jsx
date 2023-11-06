@@ -5,6 +5,7 @@ import JeweleryProducts from "../../Components/Products/jewelery.jsx";
 import CartPage from "../../Pages/Cart/cart.jsx";
 import React from "react";
 import cart from "../../Pages/Cart/cart.jsx";
+import {Link} from "react-router-dom";
 
 export const Shop = () => {
     return (
@@ -21,6 +22,11 @@ export const Shop = () => {
                 <h1> For Him and Her</h1>
                 <JeweleryProducts/>
                 <CartPage cartItems={cart} /> {/* Render the CartPage component */}
+                {/*link to cart page*/}
+                
+            </div>
+            <div>
+                <Link to="/cart">Go to Cart</Link>
             </div>
         </div>
     )
