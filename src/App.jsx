@@ -26,10 +26,6 @@ export default function App() {
                 </Routes>
                 </CartProvider>
             </Router>
-           
-        </div>
-        <div>
-    <Hero />
     </div>
     );
 };
