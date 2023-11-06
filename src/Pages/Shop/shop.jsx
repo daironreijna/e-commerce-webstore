@@ -6,14 +6,14 @@ import CartPage from "../../Pages/Cart/cart.jsx";
 import React from "react";
 import cart from "../../Pages/Cart/cart.jsx";
 import {Link} from "react-router-dom";
-
+import Hero from "../../Components/Hero/hero";
 export const Shop = () => {
     return (
         <div className="shop">
             <div className="shopTitle">
                 <h1>Amazing Shop</h1>
             </div>
-
+            <Hero/>
             <div className="products">
                <h1> For Men</h1>
                 <MenProducts/>
