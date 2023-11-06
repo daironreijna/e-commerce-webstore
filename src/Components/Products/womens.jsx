@@ -25,7 +25,6 @@ function WomenProducts() {
                     </div>
                 ))}
             </div>
-            <CartPage cartItems={cart} /> {/* Render the CartPage component */}
         </div>
     );
 }
