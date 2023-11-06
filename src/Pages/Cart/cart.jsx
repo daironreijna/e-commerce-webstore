@@ -1,10 +1,13 @@
 import React from 'react';
-import { useCart} from "../../contexts/CartContext.jsx";// Import useCart hook
+import { useCart } from "../../contexts/CartContext.jsx";
 
 function CartPage() {
-    const { cart, removeFromCart } = useCart(); // Use the useCart hook
+    const { cart, removeFromCart } = useCart();
 
-    // Calculate the total price
+    const handleRemoveFromCart = (productId) => {
+        removeFromCart(productId);
+    };
+
     const totalPrice = cart.reduce((total, item) => total + item.price, 0);
 
     return (
@@ -15,7 +18,7 @@ function CartPage() {
                     <div key={item.id} className="cart-item">
                         <p>{item.title}</p>
                         <p>${item.price}</p>
-                        <button onClick={() => removeFromCart(item.id)}>Remove</button>
+                        <button onClick={() => handleRemoveFromCart(item.id)}>Remove</button>
                     </div>
                 ))}
             </div>

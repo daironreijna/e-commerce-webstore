@@ -6,7 +6,12 @@ export function CartProvider({ children }) {
     const [cart, setCart] = useState([]);
 
     const addToCart = (product) => {
-        setCart([...cart, product]);
+        // Check if the product is already in the cart by its id
+        const productInCart = cart.find((item) => item.id === product.id);
+
+        if (!productInCart) {
+            setCart([...cart, product]);
+        }
     };
 
     const removeFromCart = (productId) => {
@@ -24,5 +29,3 @@ export function CartProvider({ children }) {
 export function useCart() {
     return useContext(CartContext);
 }
-
-
