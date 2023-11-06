@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
-import '../Navbar.css'
+import './Navbar.css'
 
-import logo from '../Assets/'
-import cart_icon from '../Assets/'
+import logo from './Components/Assets/logo 2.png'
+import cart_icon from './Components/Assets/cart_icon.png'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 
