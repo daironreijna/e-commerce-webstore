@@ -1,8 +1,9 @@
 ﻿import React, { useEffect, useState } from 'react';
-
+import CartPage from "../../Pages/Cart/cart.jsx";
 function MenProducts() {
     const [mensproducts, setMensProducts] = useState([]);
-
+    const [cart, setCart] = useState([])
+    
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/men\'s%20clothing')
             .then((res) => res.json())
@@ -27,6 +28,7 @@ function MenProducts() {
                     </div>
                 ))}
             </div>
+            <CartPage cartItems={cart} /> {/* Render the CartPage component */}
         </div>
     );
 }

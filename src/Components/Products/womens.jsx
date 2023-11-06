@@ -9,6 +9,10 @@ function WomenProducts() {
             .then((data) => setWomensproducts(data));
     }, []);
 
+    const addToCart = (product) => {
+        setCart([...cart, product]);
+    };
+    
     return (
         <div>
             <h2>Women's Clothing Products</h2>
@@ -19,6 +23,7 @@ function WomenProducts() {
                         <h3>{product.title}</h3>
                         <p>Price: ${product.price}</p>
                         <p>{product.description}</p>
+                        <button onClick={() => addToCart(product)}>Add to Cart</button>
                     </div>
                 ))}
             </div>
