@@ -2,7 +2,7 @@ import React from 'react';
 
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 /*import pages*/
-import {Cart} from './Pages/Cart/cart.jsx'
+import Cart from './Pages/Cart/cart.jsx'
 import {Shop} from './Pages/Shop/shop.jsx'
 /*import components*/
 /*
