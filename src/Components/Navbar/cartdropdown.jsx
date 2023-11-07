@@ -14,12 +14,12 @@ function CartDropdown() {
                 {cart.map((item) => (
                     <div key={item.id} className="cart-item">
                         <p>{item.title}</p><br/>
-                        <p>Price: ${item.price} x {item.quantity}</p>
+                        <p>Price: £{item.price} x {item.quantity}</p>
                         <button onClick={() => removeFromCart(item.id)}>Remove</button>
                     </div>
                 ))}
             </div>
-            <h3>Total: ${totalPrice.toFixed(2)}</h3>
+            <h3>Total: £{totalPrice.toFixed(2)}</h3>
             <Link to="/cart">Go to Cart</Link>
         </div>
     );
