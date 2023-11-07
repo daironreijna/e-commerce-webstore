@@ -5,6 +5,7 @@ import Cart from './Pages/Cart/cart.jsx';
 import {Shop} from "./Pages/Shop/shop.jsx";/* Import components */
 import { CartProvider } from './contexts/CartContext.jsx';
 import Navbar from './Components/Navbar/navbar.jsx';
+
 /* Import CSS */
 import './App.css';
 export default function App() {
@@ -22,3 +23,4 @@ export default function App() {
         </div>
     );
 }
+
