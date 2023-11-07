@@ -2,25 +2,16 @@ import React, { useState } from 'react';
 import './navbar.css';
 import logo from '../Assets/Logo 2.png';
 import cart_icon from '../Assets/cart_icon.png';
-import { Link, useNavigate } from 'react-router-dom'; // Import Link component and useNavigate
+import { Link } from 'react-router-dom'; // Import Link component
 import CartDropdown from './CartDropdown'; // Import the CartDropdown component
 
 function Navbar() {
     const [menu, setMenu] = useState("shop");
     const [isCartOpen, setCartOpen] = useState(false);
-    const navigate = useNavigate(); // Get the navigate function
 
     // Toggle the cart dropdown
     const toggleCart = () => {
         setCartOpen(!isCartOpen);
-    };
-
-    // Handle clicking on menu items
-    const handleMenuClick = (menuItem) => {
-        if (menuItem === "shop") {
-            navigate('/'); // Navigate to the shop page
-        }
-        setMenu(menuItem);
     };
 
     return (
@@ -29,18 +20,18 @@ function Navbar() {
                 <img src={logo} alt="" />
             </div>
             <ul className="nav-menu">
-                <li onClick={() => handleMenuClick("shop")}>
-                    <a href={"/"} >Shop</a>
+                <li onClick={() => { setMenu("shop") }}>
+                    <Link to="/">Shop</Link> {/* Use Link component for Shop */}
                     {menu === "shop" ? <hr /> : <></>}
                 </li>
-                <li onClick={() => handleMenuClick("mens")}>
-                    <a href="#mens">Men</a>
+                <li>
+                    <Link to="/#mens">Men</Link> {/* Use Link component for Men section */}
                 </li>
-                <li onClick={() => handleMenuClick("womens")}>
-                    <a href="#womens">Women</a>
+                <li>
+                    <Link to="/#womens">Women</Link> {/* Use Link component for Women section */}
                 </li>
-                <li onClick={() => handleMenuClick("jewelry")}>
-                    <a href="#jewelry">Jewelry</a>
+                <li>
+                    <Link to="/#jewelry">Jewelry</Link> {/* Use Link component for Jewelry section */}
                 </li>
             </ul>
             <div className="nav-login-cart">
