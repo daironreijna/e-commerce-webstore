@@ -88,9 +88,7 @@ function CartPage() {
                 <h2>CART TOTAL VALUE</h2>
                 <p>DELIVERY COST: £{deliveryCost.toFixed(2)}</p>
                 <p>TOTAL COST: £{totalCost.toFixed(2)}</p>
-            </div>
 
-            <div className="checkout-column">
                 <div className="checkout-button">
                     <button disabled>Checkout</button>
                 </div>
@@ -98,6 +96,7 @@ function CartPage() {
                     <Link to="/">Back to Shop</Link>
                 </div>
             </div>
+    
         </div>
     );
 }
