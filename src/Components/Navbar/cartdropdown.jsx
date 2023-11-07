@@ -12,7 +12,7 @@ function CartDropdown() {
             <div className="cart-items">
                 {cart.map((item) => (
                     <div key={item.id} className="cart-item">
-                        <p>{item.title}</p>
+                        <p>{item.title}</p><br/>
                         <p>Price: ${item.price} x {item.quantity}</p>
                         <button onClick={() => removeFromCart(item.id)}>Remove</button>
                     </div>
