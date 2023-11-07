@@ -9,17 +9,14 @@ import {Link} from "react-router-dom";
 import Hero from "../../Components/Hero/hero";
 export const Shop = () => {
     return (
-        <div className="shop">
-            <div className="shopTitle">
-                <h1>Amazing Shop</h1>
-            </div>
+       <div className="shop">
             <Hero/>
             <div className="products">
-               <h1> For Men</h1>
+                <h1 id="mens">For Men</h1> {/* Add an id for the Men section */}
                 <MenProducts/>
-                <h1> For Women</h1>
+                <h1 id="womens">For Women</h1> {/* Add an id for the Women section */}
                 <WomenProducts/>
-                <h1> For Him and Her</h1>
+                <h1 id="jewelry">For Him and Her</h1> {/* Add an id for the Jewelry section */}
                 <JeweleryProducts/>
                 <CartPage cartItems={cart} /> {/* Render the CartPage component */}
                 {/*link to cart page*/}
@@ -29,5 +26,6 @@ export const Shop = () => {
                 <Link to="/cart">Go to Cart</Link>
             </div>
         </div>
+            
     )
 };
