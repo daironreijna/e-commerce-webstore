@@ -106,11 +106,10 @@
     padding: 10px;
 }
 
-/* CartDropdown item */
+/* CartDropdown item container */
 .cart-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column; /* Display items in a column layout */
     padding: 10px;
     border-bottom: 1px solid #ddd;
 }
@@ -121,10 +120,12 @@
     height: auto;
 }
 
-/* CartDropdown item details */
+/* CartDropdown item details container */
 .cart-item-details {
-    flex-grow: 1;
-    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
 /* CartDropdown item title */
@@ -185,63 +186,64 @@
 }
 
 /* CartDropdown container for mobile */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .cart-dropdown {
-        position: fixed;
-        top: 0;
-        left: 0;
+        position: absolute;
+        top: 100%; /* Position it below the cart icon */
         right: 0;
-        bottom: 0;
+        width: 100%; /* Make it full width on mobile */
         background-color: #fff;
+        border: 1px solid #ddd;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 2; /* Ensure it's above other elements */
-        font-size: 16px; /* Larger font size for mobile */
+        font-size: 14px;
     }
 
-    /* CartDropdown items list for mobile */
+    /* CartDropdown items list */
     .cart-items {
         padding: 10px;
-        overflow-y: scroll; /* Add scroll for long lists */
-        height: calc(100% - 100px); /* Adjust height as needed */
     }
 
-    /* CartDropdown item for mobile */
+    /* CartDropdown item container */
     .cart-item {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column; /* Display items in a column layout */
         padding: 10px;
         border-bottom: 1px solid #ddd;
     }
 
-    /* CartDropdown item image for mobile */
+    /* CartDropdown item image */
     .cart-item img {
         width: 50px; /* Adjust image size as needed */
         height: auto;
     }
 
-    /* CartDropdown item details for mobile */
+    /* CartDropdown item details container */
     .cart-item-details {
-        flex-grow: 1;
-        margin-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
     }
 
-    /* CartDropdown item title for mobile */
+    /* CartDropdown item title */
     .cart-item-title {
         font-weight: bold;
+        font-size: 14px; /* Smaller font size */
     }
 
-    /* CartDropdown item price for mobile */
+    /* CartDropdown item price */
     .cart-item-price {
-        font-size: 14px; /* Smaller font size */
+        font-size: 12px; /* Smaller font size */
     }
 
-    /* CartDropdown item remove button for mobile */
+    /* CartDropdown item remove button */
     .cart-remove-button {
-        font-size: 14px; /* Smaller font size */
-        padding: 2px 4px; /* Smaller button size */
+        font-size: 12px; /* Smaller font size */
+        padding: 4px 8px; /* Smaller button size */
     }
 
-    /* CartDropdown total price for mobile */
+    /* CartDropdown total price */
     .cart-total {
         display: flex;
         justify-content: space-between;
@@ -249,32 +251,35 @@
         padding: 10px;
         background-color: #f7f7f7;
         font-weight: bold;
+        font-size: 14px; /* Smaller font size */
     }
 
-    /* CartDropdown buttons container for mobile */
+    /* CartDropdown buttons container */
     .cart-buttons {
         display: flex;
         justify-content: space-between;
         padding: 10px;
     }
 
-    /* CartDropdown checkout button for mobile */
+    /* CartDropdown checkout button */
     .cart-checkout-button {
         background-color: #007bff;
         color: #fff;
         border: none;
         border-radius: 4px;
         padding: 10px 20px;
+        font-size: 14px; /* Smaller font size */
         cursor: pointer;
     }
 
-    /* CartDropdown continue shopping button for mobile */
+    /* CartDropdown continue shopping button */
     .cart-continue-button {
         background-color: #f7f7f7;
         color: #333;
         border: none;
         border-radius: 4px;
         padding: 10px 20px;
+        font-size: 14px; /* Smaller font size */
         cursor: pointer;
     }
 }

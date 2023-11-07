@@ -29,13 +29,9 @@ function Navbar() {
     return (
         <div className='navbar'>
             <div className="nav-logo">
-                <img src={logo} alt="" />
+               <Link to={"/"}> <img src={logo} alt="" /></Link>
             </div>
             <ul className="nav-menu">
-                <li onClick={() => { setMenu("shop") }}>
-                    <Link to="/">Shop</Link> {/* Use Link component for Shop */}
-                    {menu === "shop" ? <hr /> : <></>}
-                </li>
                 <li onClick={() => scrollToSection("mens")}>
                     <span>Men</span>
                 </li>
