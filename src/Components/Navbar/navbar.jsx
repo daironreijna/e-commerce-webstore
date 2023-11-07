@@ -32,15 +32,9 @@ function Navbar() {
                <Link to={"/"}> <img src={logo} alt="" /></Link>
             </div>
             <ul className="nav-menu">
-                <li onClick={() => scrollToSection("mens")}>
-                    <span>Men</span>
-                </li>
-                <li onClick={() => scrollToSection("womens")}>
-                    <span>Women</span>
-                </li>
-                <li onClick={() => scrollToSection("jewelry")}>
-                    <span>Jewelry</span>
-                </li>
+                <a href={'/#mens'}> Mens</a>
+                <a href={'/#womens'}> Womens</a>
+                <a href={'/#jewelry'}> Jewelry</a>
             </ul>
             <div className="nav-login-cart">
                 <Link to='/login'><button>Login</button></Link>

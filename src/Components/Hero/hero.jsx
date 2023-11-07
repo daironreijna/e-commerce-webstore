@@ -20,8 +20,8 @@ const Hero = () => {
                             Shop Our New Catalogue
                         </h1>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Whatever you are looking for COMPANY_NAME has got it. Browse our
-                            new range of CLOTHES_NAMES
+                            Whatever you are looking for DAAK has got it. Browse our
+                            new range of DAAK clothing items.
                         </p>
                         <div className="mt-10 flex items-center justify-center gap-x-6">
                             <Link
