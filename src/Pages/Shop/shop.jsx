@@ -1,4 +1,4 @@
-﻿import react from 'react'
+﻿
 import MenProducts from '../../Components/Products/mens.jsx'
 import WomenProducts from "../../Components/Products/womens.jsx";
 import JeweleryProducts from "../../Components/Products/jewelery.jsx";
