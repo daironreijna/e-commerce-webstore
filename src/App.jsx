@@ -5,6 +5,7 @@ import Cart from './Pages/Cart/cart.jsx';
 import {Shop} from "./Pages/Shop/shop.jsx";/* Import components */
 import { CartProvider } from './contexts/CartContext.jsx';
 import Navbar from './Components/Navbar/navbar.jsx';
+import Footer from './Components/Footer/Footer.jsx';
 
 /* Import CSS */
 import './App.css';
@@ -18,9 +19,13 @@ export default function App() {
                         <Route path="/" element={<Shop />} />
                         <Route path="/cart" element={<Cart />} />
                     </Routes>
+                    <Footer/>
                 </Router>
             </CartProvider>
         </div>
     );
 }
+
+
+
 
