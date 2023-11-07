@@ -1,35 +1,63 @@
-import React, { useContext, useState } from 'react'
-import '../Navbar.css'
+import React, { useState } from 'react';
+import './navbar.css';
+import logo from '../Assets/Logo 2.png';
+import cart_icon from '../Assets/cart_icon.png';
+import { Link, useLocation } from 'react-router-dom'; // Import Link component and useLocation
+import CartDropdown from './CartDropdown'; // Import the CartDropdown component
 
-import logo from '../Assets/'
-import cart_icon from '../Assets/'
-import { Link } from 'react-router-dom'
-import { ShopContext } from '../../Context/ShopContext'
+function Navbar() {
+    const [menu, setMenu] = useState("shop");
+    const [isCartOpen, setCartOpen] = useState(false);
+    const location = useLocation(); // Get the current location
 
-const Navbar = () => {
+    // Toggle the cart dropdown
+    const toggleCart = () => {
+        setCartOpen(!isCartOpen);
+    };
 
-    const [menu,setMenu] = useState("shop");
-    const {getTotalCartItems}= useContext(ShopContext);
+    const scrollToSection = (sectionId) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            // Check if not on the homepage and redirect to the homepage first
+            if (location.pathname !== '/') {
+                window.location.href = '/#'; // Redirect to homepage
+            }
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
 
-  return (
-    <div className='navbar'>
-      <div className="nav-logo">
-        <img src={logo} alt="" />
-        <p>DAAK!</p>
-      </div>
-      <ul className="nav-menu">
-        <li onClick={()=>{setMenu("shop")}}><Link style={{ textDecoration: 'none' }} to='/'>Shop</Link>{menu==="shop"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("mens")}}><Link style={{ textDecoration: 'none' }} to='/mens'>Men</Link>{menu==="mens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("womens")}}><Link style={{ textDecoration: 'none' }} to="womens">Women</Link>{menu==="womens"?<hr/>:<></>}</li>
-        <li onClick={()=>{setMenu("kids")}}><Link style={{ textDecoration: 'none' }} to='/kids'>Kids</Link>{menu==="kids"?<hr/>:<></>}</li>
-      </ul>
-      <div className="nav-login-cart">
-        <Link to='/login'><button>Login</button></Link>
-        <Link to='/cart'><img src={cart_icon} alt="" /></Link>
-        <div className="nav-cart-count">{getTotalCartItems()}</div>
-      </div>
-    </div>
-  )
+    return (
+        <div className='navbar'>
+            <div className="nav-logo">
+               <Link to={"/"}> <img src={logo} alt="" /></Link>
+            </div>
+            <ul className="nav-menu">
+                <li onClick={() => scrollToSection("mens")}>
+                    <span>Men</span>
+                </li>
+                <li onClick={() => scrollToSection("womens")}>
+                    <span>Women</span>
+                </li>
+                <li onClick={() => scrollToSection("jewelry")}>
+                    <span>Jewelry</span>
+                </li>
+            </ul>
+            <div className="nav-login-cart">
+                <Link to='/login'><button>Login</button></Link>
+                {/* Add an icon to toggle the cart */}
+                <img
+                    src={cart_icon}
+                    alt=""
+                    onClick={toggleCart}
+                    style={{ cursor: 'pointer' }}
+                />
+              
+
+                {/* Display the cart dropdown when it's open */}
+                {isCartOpen && <CartDropdown />}
+            </div>
+        </div>
+    );
 }
 
-export default Navbar
+export default Navbar;
