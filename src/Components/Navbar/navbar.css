@@ -43,6 +43,24 @@
     gap: 3px;
     cursor: pointer;
 }
+/* Add underline styles for li items */
+.nav-menu li::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.nav-menu li:hover::after {
+    transform: scaleX(1); /* Show the underline on hover */
+    background-color: #FF4141; /* Red color */
+}
 
 .nav-menu hr {
     border: none;

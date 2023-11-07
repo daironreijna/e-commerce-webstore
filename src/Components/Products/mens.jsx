@@ -1,6 +1,7 @@
 ﻿import React, { useEffect, useState } from 'react';
 import CartPage from "../../Pages/Cart/cart.jsx";
 import {useCart} from "../../contexts/CartContext.jsx";
+import './item.css'
 function MenProducts() {
     const [mensproducts, setMensProducts] = useState([]);
     const { cart, addToCart } = useCart(); // Use the useCart hook

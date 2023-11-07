@@ -7,25 +7,29 @@ import React from "react";
 import cart from "../../Pages/Cart/cart.jsx";
 import {Link} from "react-router-dom";
 import Hero from "../../Components/Hero/hero";
+import './shop.css'
 export const Shop = () => {
     return (
-       <div className="shop">
-            <Hero/>
+        <div className="shop">
+            <Hero />
             <div className="products">
-                <h1 id="mens">For Men</h1> {/* Add an id for the Men section */}
-                <MenProducts/>
-                <h1 id="womens">For Women</h1> {/* Add an id for the Women section */}
-                <WomenProducts/>
-                <h1 id="jewelry">For Him and Her</h1> {/* Add an id for the Jewelry section */}
-                <JeweleryProducts/>
-                <CartPage cartItems={cart} /> {/* Render the CartPage component */}
-                {/*link to cart page*/}
-                
-            </div>
-            <div>
-                <Link to="/cart">Go to Cart</Link>
+                <h1 className="section-title" id="mens">
+                    For Men
+                </h1>
+                <MenProducts />
+                <h1 className="section-title" id="womens">
+                    For Women
+                </h1>
+                <WomenProducts />
+                <h1 className="section-title" id="jewelry">
+                    For Him and Her
+                </h1>
+                <JeweleryProducts />
+                <CartPage cartItems={cart} />
+                <Link to="/cart" className="cart-link">
+                    Go to Cart
+                </Link>
             </div>
         </div>
-            
-    )
+    );
 };
