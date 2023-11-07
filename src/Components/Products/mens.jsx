@@ -1,10 +1,11 @@
 ﻿import React, { useEffect, useState } from 'react';
 import CartPage from "../../Pages/Cart/cart.jsx";
-import {useCart} from "../../contexts/CartContext.jsx";
-import './item.css'
+import { useCart } from "../../contexts/CartContext.jsx";
+import './item.css';
+
 function MenProducts() {
     const [mensproducts, setMensProducts] = useState([]);
-    const { cart, addToCart } = useCart(); // Use the useCart hook
+    const { cart, addToCart } = useCart();
 
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/category/men\'s%20clothing')
@@ -12,18 +13,17 @@ function MenProducts() {
             .then((data) => setMensProducts(data));
     }, []);
 
-
     return (
-        <div>
-            <h2>Men's Clothing Products</h2>
+        <div className="products-container">
+            <h2 className="product-category-title">Men's Clothing Products</h2>
             <div className="product-list">
                 {mensproducts.map((product) => (
-                    <div key={product.id} className="product">
-                        <img src={product.image} alt={product.title} />
-                        <h3>{product.title}</h3>
-                        <p>Price: ${product.price}</p>
-                        <p>{product.description}</p>
-                        <button onClick={() => addToCart(product)}>Add to Cart</button>
+                    <div key={product.id} className="product-item">
+                        <img src={product.image} alt={product.title} className="product-image" />
+                        <h3 className="product-title">{product.title}</h3>
+                        <p className="product-price">Price: ${product.price}</p>
+                        <p className="product-description">{product.description}</p>
+                        <button onClick={() => addToCart(product)} className="add-to-cart-button">Add to Cart</button>
                     </div>
                 ))}
             </div>

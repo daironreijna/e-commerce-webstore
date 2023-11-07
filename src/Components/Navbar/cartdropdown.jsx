@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import { useCart } from '../../contexts/CartContext';
+import {Link} from "react-router-dom";
 
 function CartDropdown() {
     const { cart, removeFromCart } = useCart();
@@ -19,6 +20,7 @@ function CartDropdown() {
                 ))}
             </div>
             <h3>Total: ${totalPrice.toFixed(2)}</h3>
+            <Link to="/cart">Go to Cart</Link>
         </div>
     );
 }

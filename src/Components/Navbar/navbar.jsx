@@ -51,7 +51,7 @@ function Navbar() {
                     onClick={toggleCart}
                     style={{ cursor: 'pointer' }}
                 />
-                <Link to="/cart">Go to Cart</Link>
+              
 
                 {/* Display the cart dropdown when it's open */}
                 {isCartOpen && <CartDropdown />}

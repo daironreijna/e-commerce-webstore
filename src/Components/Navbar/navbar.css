@@ -301,3 +301,46 @@
         cursor: pointer;
     }
 }
+
+
+/* Mobile styles using @media selector */
+@media (max-width: 768px) {
+    /* Logo text for mobile */
+    .nav-logo {
+        width: 40%; /* Adjust logo font size for mobile */
+    }
+    .navbar {
+        justify-content: start;
+    }
+    .nav-login-cart {
+        gap: 25px;
+    }
+    .nav-menu{
+        display: none;
+    }
+    /* Cart button for mobile */
+    .nav-login-cart img{
+        padding: 5px;
+        width: 30px; /* Adjust font size for mobile */
+    }
+
+    /* Login button for mobile */
+    .nav-login-cart button {
+        width: auto; /* Adjust width for mobile */
+        height: 20px; /* Increase button height for mobile */
+        font-size: 8px; /* Increase font size for mobile */
+        padding: 5px;
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+
+    /* Cart count for mobile */
+    .nav-cart-count {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+
+    /* Mobile menu button */
+    /* ... (add styles for the mobile menu button if needed) ... */
+}
