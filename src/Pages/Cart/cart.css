@@ -1,0 +1,141 @@
+﻿/* cart.css */
+
+
+/* Main container for the entire cart page */
+.cart-page {
+    margin-top: 300px;
+    padding: 20px;
+    color: black;
+}
+
+/* Delivery details section */
+.delivery-details {
+    margin-bottom: 20px;
+}
+
+.delivery-options label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Summary of cart shopping items section */
+.summary {
+    margin-bottom: 20px;
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cart-item {
+    width: calc(50% - 10px); /* Two items per row with gap */
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* Image of Item */
+.cart-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Title */
+.item-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Description */
+.item-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Price and Quantity */
+.item-price-quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-price-quantity p {
+    margin: 0;
+}
+
+/* Quantity control buttons */
+.quantity-control button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-control button:hover {
+    background-color: #0056b3;
+}
+
+/* Subtotal */
+.item-subtotal {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Remove Item button */
+.remove-item {
+    background-color: #ff4141;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #d63232;
+}
+
+/* Cart Total section */
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Your Cart section */
+.your-cart {
+    margin-bottom: 20px;
+}
+
+/* Checkout button */
+.checkout-button button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button button:hover {
+    background-color: #0056b3;
+}

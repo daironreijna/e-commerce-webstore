@@ -301,8 +301,51 @@
         cursor: pointer;
     }
 }
+/* Tablet styles using @media selector */
+@media (max-width: 1024px) {
+    /* Logo text for tablets */
+    .navbar {
+        justify-content: start;
+    }
+    .nav-logo {
+        width: 40%; /* Adjust logo font size for tablets */
+    }
+    .nav-menu {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 20px;
+        color: #626262;
+        font-size: 15px;
+        font-weight: 500;
+    }
 
+    /* Cart button for tablets */
+    .nav-login-cart img {
+        padding: 8px;
+        width: 40px; /* Adjust font size for tablets */
+    }
 
+    /* Login button for tablets */
+    .nav-login-cart button {
+        width: auto; /* Adjust width for tablets */
+        height: 24px; /* Increase button height for tablets */
+        font-size: 10px; /* Increase font size for tablets */
+        padding: 8px;
+        margin-left: 30px; /* Adjust margin for tablets */
+        margin-right: 0px;
+    }
+
+    /* Cart count for tablets */
+    .nav-cart-count {
+        width: 24px;
+        height: 24px;
+        font-size: 16px; /* Adjust font size for tablets */
+    }
+
+    /* ... (add other tablet-specific styles if needed) ... */
+}
 /* Mobile styles using @media selector */
 @media (max-width: 768px) {
     /* Logo text for mobile */
