@@ -20,17 +20,24 @@ function Footer() {
                     <path
                       d="M12.378 1.602a.75.75 0 00-.756 0L3 6.632l9 5.25 9-5.25-8.622-5.03zM21.75 7.93l-9 5.25v9l8.628-5.032a.75.75 0 00.372-.648V7.93zM11.25 22.18v-9l-9-5.25v8.57a.75.75 0 00.372.648l8.628 5.033z" />
                   </svg>
-                  DAAK! Smart Shopper
+                  About Us
                 </h6>
                 <p>
-                  The ecommerce webpage you can trust!
+                  DAAK! The ecommerce webpage you can trust!
+                  </p> 
+                <br/>
+                  <p>
+                  Our shopping page has been offering customers the best choices at unbeatable prices. 
+                  The brands we have on offer are of the highest quality with products built to last. 
+                  Browse through our vast selection today.
+                  
                 </p>
               </div>
               {/* <!-- Products section --> */}
               <div className="">
                 <h6
                   className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
-                  About Us
+                  Powered By
                 </h6>
                 <p className="mb-4">
                   <a className="text-neutral-600 dark:text-neutral-200"
@@ -60,10 +67,7 @@ function Footer() {
                   <a className="text-neutral-600 dark:text-neutral-200"
                   >Netlify</a>
                 </p>
-                <p className="mb-4">
-                  <a className="text-neutral-600 dark:text-neutral-200"
-                  >Help</a>
-                </p>
+            
               </div>
               {/* <!-- Contact section --> */}
               <div>
