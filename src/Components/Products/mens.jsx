@@ -23,6 +23,7 @@ function MenProducts() {
                         <h3 className="product-title">{product.title}</h3>
                         <p className="product-price">Price: £{product.price}</p>
                         <p className="product-description">{product.description}</p>
+                        <p className="text-black">{product.rating.rate} / 5 <br/> {product.rating.count} people liked this</p>
                         <button onClick={() => addToCart(product)} className="add-to-cart-button">Add to Cart</button>
                     </div>
                 ))}
