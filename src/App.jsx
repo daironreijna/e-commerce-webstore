@@ -6,6 +6,7 @@ import {Shop} from "./Pages/Shop/shop.jsx";/* Import components */
 import { CartProvider } from './contexts/CartContext.jsx';
 import Navbar from './Components/Navbar/navbar.jsx';
 import Footer from './Components/Footer/Footer.jsx';
+import {Login} from './Pages/loginsignup.jsx';
 
 /* Import CSS */
 import './App.css';
@@ -18,6 +19,7 @@ export default function App() {
                     <Routes>
                         <Route path="/" element={<Shop />} />
                         <Route path="/cart" element={<Cart />} />
+                        <Route path="/login" element={<Login />} />
                     </Routes>
                     <Footer/>
                 </Router>
