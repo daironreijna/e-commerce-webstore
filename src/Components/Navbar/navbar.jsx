@@ -3,7 +3,7 @@ import './navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link, useLocation } from 'react-router-dom'; // Import Link component and useLocation
-import CartDropdown from './CartDropdown'; // Import the CartDropdown component
+import CartDropdown from './cartdropdown'; // Import the CartDropdown component
 
 function Navbar() {
     const [menu, setMenu] = useState("mens");
