@@ -1,4 +1,5 @@
 # DAAK! Smart Shopper: E-Commerce Webstore
+
 Welcome to DAAK! Smart Shopper. The e-commerce webstore you can trust!
 
 Our shopping webpage has been created to offer customers the best choice products at unbeatable price and quality. 
@@ -13,6 +14,8 @@ DAAK! allows users to select a vast range of items including clothes and jewelle
 
 In this project several technologies are used to bring a feature rich and exciting web project to life! As a project team we thought about what would be a simple way to shop for your favourite products.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72dba3fb-7722-4ac6-ae08-bc33d4000f10/deploy-status)](https://app.netlify.com/sites/daak-store/deploys)
+
 ### User Story
 
 As a user looking for a simplified and interactive shopping experience on one dedicated webpage,  I want to be able to browse and add these products to my shopping cart prior to placing an order. This will allow me to see my total amount to be spent as well as any additional shipping costs. 
@@ -20,14 +23,16 @@ As a user looking for a simplified and interactive shopping experience on one de
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Project Objectives](#project-objectives)
-- [Deployment](#deployment)
-- [Project Features](#project-features)
-- [Contributing](#contributing)
-- [Credits and Resources](#credits-and-resources)
-- [Accessibility Testing](#accessibility-testing)
-- [Licence](#license)
+* [Overview](#overview)
+* [Project Objectives](#project-objectives)
+* [Deployment](#deployment)
+* [Project Features](#project-features)
+* [Contributing](#contributing)
+* [Credits and Resources](#credits-and-resources)
+* [Accessibility Testing](#accessibility-testing)
+* [Licence](#license)
+* [Deploy to Netlify button](#deploy-to-netlify-button)
+
 
 ## Project Objectives
 
@@ -101,7 +106,6 @@ Anderson Gumede,
 Dairon Reijna,
 Kapil Rekhi
 
-
 We welcome contributions from the community to enhance this Portfolio Project. By participating in this project, you contribute to a vibrant and inclusive environment. To ensure a positive experience the code of conduct we will adhere to is based on [The Contributor Covenant](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md). Please review and follow these guidelines when contributing.
 
 ## Accessibility Testing
@@ -112,7 +116,15 @@ As leaders in front-end web development we aim to develop websites that are buil
 
 This project is licensed under a MIT License.
 
+## Deploy to Netlify button
+You can deploy this and all the other examples in this repo as a site of your own to explore and experiment with, by clicking this button.
+<!-- Source: https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git -->
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/daironreijna/e-commerce-webstore)
+
+Or follow the instructions here to integrate a fork of this repo to netlify.
+[Netlify (2023) Create Deploys](https://docs.netlify.com/site-deploys/create-deploys/#deploy-with-git)
+
 ---
 
 © 2023 - Ahmed Ayad, Anderson Gumede, Dairon Reijna, Kapil Rekhi.
-

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './navbar.css';
+import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link, useLocation } from 'react-router-dom'; // Import Link component and useLocation
-import CartDropdown from './CartDropdown'; // Import the CartDropdown component
+import CartDropdown from './Cartdropdown'; // Import the CartDropdown component
 
 function Navbar() {
     const [menu, setMenu] = useState("mens");
@@ -31,28 +31,28 @@ function Navbar() {
     return (
         <div className='navbar bg-sky-950' >
             <div className="nav-logo">
-               <Link to={"/"}> <img class="rounded-full" src={logo} alt="" /></Link>
+                <Link to={"/"}> <img className="rounded-full" src={logo} alt="" /></Link>
             </div>
             <p className="nav-logo-name"><Link to={"/"}>Smart Shopper</Link></p>
             <ul className="nav-menu">
                 {/* <li onClick={()=>{setMenu(mens)}}>Mens{menu==="mens"?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu(women)}}>Women{menu==="women"?<hr/>:<></>}</li>
                 <li onClick={()=>{setMenu(jewelry)}}>Jewelry{menu==="jewelry"?<hr/>:<></>}</li> */}
-                <a href={'/#mens'}> Mens<hr/></a>
-                <a href={'/#womens'}> Womens<hr/></a>
-                <a href={'/#jewelry'}> Jewelry<hr/></a>
+                <a href={'/#mens'}> Mens<hr /></a>
+                <a href={'/#womens'}> Womens<hr /></a>
+                <a href={'/#jewelry'}> Jewelry<hr /></a>
             </ul>
             <div className="nav-login-cart">
                 <Link to='/login'><button>Login</button></Link>
                 {/* Add an icon to toggle the cart */}
-               <img src={cart_icon}
+                <img src={cart_icon}
                     alt=""
                     onClick={toggleCart}
-                    style={{ cursor: 'pointer' }}                 
+                    style={{ cursor: 'pointer' }}
                 />
-                
+
                 {/* <div className="nav-cart-count">{getTotalCartItems}</div> */}
-              
+
 
                 {/* Display the cart dropdown when it's open */}
                 {isCartOpen && <CartDropdown />}
