@@ -7,7 +7,7 @@ import JewelryProducts from '../../Components/Products/Jewelery.jsx';
 // import { Cart } from './contexts/Cart/Cart.jsx';
 // import { Link } from "react-router-dom";
 import Hero from "../../Components/Hero/Hero.jsx";
-import './Shop.css';
+import "./Shop.css";
 
 export const Shop = () => {
     return (

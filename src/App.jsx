@@ -10,6 +10,7 @@ import { Login } from './Pages/LoginSignUp.jsx';
 
 /* Import CSS */
 import './App.css';
+
 export default function App() {
     return (
         <div className="overflow-hidden">
