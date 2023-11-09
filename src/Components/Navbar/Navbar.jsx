@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import './Navbar.css';
+import './navbar.css';
 import logo from '../Assets/logo.png';
 import cart_icon from '../Assets/cart_icon.png';
 import { Link, useLocation } from 'react-router-dom'; // Import Link component and useLocation
-import CartDropdown from './CartDropDown'; // Import the CartDropdown component
+import CartDropdown from './cartdropdown'; // Import the CartDropdown component
 
 function Navbar() {
     const [menu, setMenu] = useState("mens");
@@ -29,26 +29,27 @@ function Navbar() {
     };
 
     return (
-        <div className='navbar bg-sky-950' >
-            <div className="nav-logo">
-                <Link to={"/"}> <img className="rounded-full" src={logo} alt="" /></Link>
+        <div className='navbar flex bg-sky-950 justify-between ' >
+            <div className="">
+                <Link to={"/"}> <img className="rounded-full m-10 w-1/3 sm:w-1/4" src={logo} alt="DAAK Logo" /></Link>
             </div>
-            <p className="nav-logo-name"><Link to={"/"}>Smart Shopper</Link></p>
-            <ul className="nav-menu">
-                {/* <li onClick={()=>{setMenu(mens)}}>Mens{menu==="mens"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu(women)}}>Women{menu==="women"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu(jewelry)}}>Jewelry{menu==="jewelry"?<hr/>:<></>}</li> */}
-                <a href={'/#mens'}> Mens<hr /></a>
-                <a href={'/#womens'}> Womens<hr /></a>
-                <a href={'/#jewelry'}> Jewelry<hr /></a>
+            <ul className="navItems flex columns-3 text-white text-lg font-medium text-md center ">
+                <a className="hover:underline hover:text-red-500 " href={'/#mens'}> Mens</a>
+                <a className="hover:underline hover:text-red-500 px-5" href={'/#womens'}> Womens</a>
+                <a className="hover:underline hover:text-red-500 " href={'/#jewelry'}> Jewelry</a>
             </ul>
-            <div className="nav-login-cart">
-                <Link to='/login'><button>Login</button></Link>
+            <div className="gap-5 columns-2">
+                <Link to='/login'><button
+                    className=
+                        " hover:animate-pulse bg-white text-gray-700 py-1 px-2 rounded-md text-sm font-medium ">
+                    Login</button></Link>
                 {/* Add an icon to toggle the cart */}
-                <img src={cart_icon}
+                <img
+                    src={cart_icon}
                     alt=""
                     onClick={toggleCart}
                     style={{ cursor: 'pointer' }}
+                    className="w-8 hover:animate-bounce bg-white rounded-md"
                 />
 
                 {/* <div className="nav-cart-count">{getTotalCartItems}</div> */}

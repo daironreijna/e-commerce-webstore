@@ -1,7 +1,6 @@
 .navbar {
   position: fixed;
-  display: flex;
-  justify-content: space-around;
+
   align-items: center;
   padding: 0.3px;
   z-index: 1;
@@ -12,7 +11,13 @@
   right: 0; /* Add right: 0 to make sure it stays at the right edge */
   color: black;
   box-shadow: 0 1px 3px -2px black;
-}  
+}
+@media (max-width: 600px) {
+  .navItems {
+    display: none !important;
+  }
+}
+
 
 .nav-logo {
   display: flex;
@@ -308,9 +313,7 @@
 /* Tablet styles using @media selector */
 @media (max-width: 1024px) {
   /* Logo text for tablets */
-  .navbar {
-    justify-content: start;
-  }
+
   .nav-logo {
     width: 40%; /* Adjust logo font size for tablets */
   }
@@ -356,9 +359,7 @@
   .nav-logo {
     width: 40%; /* Adjust logo font size for mobile */
   }
-  .navbar {
-    justify-content: start;
-  }
+
   .nav-login-cart {
     gap: 25px;
   }
