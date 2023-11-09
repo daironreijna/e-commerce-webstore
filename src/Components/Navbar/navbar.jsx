@@ -29,24 +29,27 @@ function Navbar() {
     };
 
     return (
-        <div className='navbar bg-sky-950' >
-            <div className="flex items-center space-x-2">
-               <Link to={"/"}> <img class="rounded-full " src={logo} alt="" /></Link>
+        <div className='navbar flex bg-sky-950 justify-between ' >
+            <div className="">
+               <Link to={"/"}> <img className="rounded-full m-10 w-1/3 sm:w-1/4" src={logo} alt="DAAK Logo" /></Link>
             </div>
-            <p className="text-white text-xl font-semibold"><Link to={"/"}>Smart Shopper</Link></p>
-            <ul className="md:flex space-x-4 text-white text-lg font-medium">
-                <a href={'/#mens'}> Mens<hr/></a>
-                <a href={'/#womens'}> Womens<hr/></a>
-                <a href={'/#jewelry'}> Jewelry<hr/></a>
+            <ul className="navItems flex columns-3 text-white text-lg font-medium text-md center ">
+                <a className="hover:underline hover:text-red-500 " href={'/#mens'}> Mens</a>
+                <a className="hover:underline hover:text-red-500 px-5" href={'/#womens'}> Womens</a>
+                <a className="hover:underline hover:text-red-500 " href={'/#jewelry'}> Jewelry</a>
             </ul>
-            <div className="nav-login-cart">
-                <Link to='/login'><button className="bg-white text-gray-700 py-2 px-4 rounded-md text-sm font-medium">Login</button></Link>
+            <div className="gap-5 columns-2">
+                <Link to='/login'><button 
+                    className=
+                        " hover:animate-pulse bg-white text-gray-700 py-1 px-2 rounded-md text-sm font-medium ">
+                    Login</button></Link>
                 {/* Add an icon to toggle the cart */}
-               <img src={cart_icon}
+                <img
+                    src={cart_icon}
                     alt=""
                     onClick={toggleCart}
-                    style={{ cursor: 'pointer' }}           
-                    className="animate-bounce bg-white rounded-md"
+                    style={{ cursor: 'pointer' }}
+                    className="w-8 hover:animate-bounce bg-white rounded-md"
                 />
                 
                 {/* <div className="nav-cart-count">{getTotalCartItems}</div> */}

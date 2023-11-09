@@ -40,63 +40,65 @@ function CartPage() {
 
     return (
         <div className="cart-page">
-           
+        <div className=" bg-gray-100 p-4">
 
-            <div className="cart-items">
-                {cart.map((item) => (
-                    <div key={item.id} className="cart-item">
-                        {/* Image of Item */}
-                        <img src={item.image} alt={item.title} />
-                        {/* Title */}
-                        <p className="item-title">{item.title}</p>
-                        {/* Description */}
-                        <p className="item-description">{item.description}</p>
-                        {/* Price and Quantity */}
-                        <div className="item-price-quantity">
-                            <p>Price £{item.price}</p>
-                            <div className="quantity-control">
-                                <button onClick={() => handleQuantityChange(item.id, item.quantity - 1)}>-</button>
-                                <p>{item.quantity}</p>
-                                <button onClick={() => handleQuantityChange(item.id, item.quantity + 1)}>+</button>
+            <div className="max-w-screen-xl mx-auto bg-white rounded-lg shadow-lg p-4 md:flex space-x-4">
+                <div className="md:w-2/3">
+                    <h2 className="text-2xl font-semibold mb-4 text-gray-700">Shopping Cart</h2>
+                    <div className="cart-items">
+                        {cart.map((item) => (
+                            <div key={item.id} className="flex border-b border-gray-300 pb-4 mb-4">
+                                <div className="w-24 h-24 bg-gray-200 rounded-md overflow-hidden">
+                                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                                </div>
+                                <div className="flex-1 ml-4">
+                                    <h3 className="text-xl font-semibold text-gray-700">{item.title}</h3>
+                                    <p className="text-gray-600">Price: £{item.price}</p>
+                                    <div className="quantity-control mt-2 text-gray-700">
+                                        <button onClick={() => handleQuantityChange(item.id, item.quantity - 1)} className="px-2 py-1 bg-gray-300 text-gray-700 rounded-md">-</button>
+                                        <p className="mx-2">{item.quantity}</p>
+                                        <button onClick={() => handleQuantityChange(item.id, item.quantity + 1)} className="px-2 py-1 bg-gray-300 text-gray-700 rounded-md">+</button>
+                                    </div>
+                                    <p className="text-gray-600 mt-2">Subtotal: £{(item.price * item.quantity).toFixed(2)}</p>
+                                    <button className="remove-item text-red-500 mt-2" onClick={() => handleRemoveFromCart(item.id)}>Remove Item</button>
+                                </div>
                             </div>
-                        </div>
-                        {/* Subtotal */}
-                        <p className="item-subtotal">Subtotal £{(item.price * item.quantity).toFixed(2)}</p>
-                        {/* Remove Item */}
-                        <button className="remove-item" onClick={() => handleRemoveFromCart(item.id)}>Remove Item</button>
+                        ))}
                     </div>
-                ))}
+                </div>
+                <div className="md:w-1/3">
+                    <div className="totals-column">
+                        <h2 className="text-2xl font-semibold mb-4 text-gray-700">DELIVERY DETAILS</h2>
+                        <div className="delivery-options space-y-2 text-gray-700">
+                            {deliveryOptions.map((option) => (
+                                <label key={option.id} className="flex items-center ">
+                                    <input
+                                        type="radio"
+                                        name="delivery-option"
+                                        value={option.id}
+                                        checked={selectedDeliveryOption === option.id}
+                                        onChange={handleDeliveryOptionChange}
+                                        className="mr-2"
+                                    />
+                                    {option.label} Price £{option.price.toFixed(2)}
+                                </label>
+                            ))}
+                        </div>
+
+                        <h2 className="text-2xl font-semibold mt-4 text-gray-700">CART TOTAL VALUE</h2>
+                        <p className="text-gray-700">DELIVERY COST: £{deliveryCost.toFixed(2)}</p>
+                        <p className="text-gray-700">TOTAL COST: £{totalCost.toFixed(2)}</p>
+
+                        <div className="checkout-button mt-4">
+                            <button disabled className="px-4 py-2 bg-gray-400 text-gray-800 rounded-md cursor-not-allowed">Checkout</button>
+                        </div>
+                        <div>
+                            <Link to="/" className="block text-blue-500 font-semibold mt-2 hover:underline">Back to Shop</Link>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <div className="totals-column">
-                <h2>DELIVERY DETAILS</h2>
-                <div className="delivery-options">
-                    {deliveryOptions.map((option) => (
-                        <label key={option.id}>
-                            <input
-                                type="radio"
-                                name="delivery-option"
-                                value={option.id}
-                                checked={selectedDeliveryOption === option.id}
-                                onChange={handleDeliveryOptionChange}
-                            />
-                            {option.label} Price £{option.price.toFixed(2)}
-                        </label>
-                    ))}
-                </div>
-
-                <h2>CART TOTAL VALUE</h2>
-                <p>DELIVERY COST: £{deliveryCost.toFixed(2)}</p>
-                <p>TOTAL COST: £{totalCost.toFixed(2)}</p>
-
-                <div className="checkout-button">
-                    <button disabled>Checkout</button>
-                </div>
-                <div>
-                    <Link to="/">Back to Shop</Link>
-                </div>
-            </div>
-    
+        </div>
         </div>
     );
 }
