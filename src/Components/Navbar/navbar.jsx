@@ -30,25 +30,23 @@ function Navbar() {
 
     return (
         <div className='navbar bg-sky-950' >
-            <div className="nav-logo">
-               <Link to={"/"}> <img class="rounded-full" src={logo} alt="" /></Link>
+            <div className="flex items-center space-x-2">
+               <Link to={"/"}> <img class="rounded-full " src={logo} alt="" /></Link>
             </div>
-            <p className="nav-logo-name"><Link to={"/"}>Smart Shopper</Link></p>
-            <ul className="nav-menu">
-                {/* <li onClick={()=>{setMenu(mens)}}>Mens{menu==="mens"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu(women)}}>Women{menu==="women"?<hr/>:<></>}</li>
-                <li onClick={()=>{setMenu(jewelry)}}>Jewelry{menu==="jewelry"?<hr/>:<></>}</li> */}
+            <p className="text-white text-xl font-semibold"><Link to={"/"}>Smart Shopper</Link></p>
+            <ul className="md:flex space-x-4 text-white text-lg font-medium">
                 <a href={'/#mens'}> Mens<hr/></a>
                 <a href={'/#womens'}> Womens<hr/></a>
                 <a href={'/#jewelry'}> Jewelry<hr/></a>
             </ul>
             <div className="nav-login-cart">
-                <Link to='/login'><button>Login</button></Link>
+                <Link to='/login'><button className="bg-white text-gray-700 py-2 px-4 rounded-md text-sm font-medium">Login</button></Link>
                 {/* Add an icon to toggle the cart */}
                <img src={cart_icon}
                     alt=""
                     onClick={toggleCart}
-                    style={{ cursor: 'pointer' }}                 
+                    style={{ cursor: 'pointer' }}           
+                    className="animate-bounce bg-white rounded-md"
                 />
                 
                 {/* <div className="nav-cart-count">{getTotalCartItems}</div> */}
