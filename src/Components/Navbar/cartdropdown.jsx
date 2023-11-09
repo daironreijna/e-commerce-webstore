@@ -1,6 +1,6 @@
 ﻿import React from 'react';
 import { useCart } from '../../contexts/CartContext';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function CartDropdown() {
     const { cart, removeFromCart } = useCart();
@@ -13,7 +13,7 @@ function CartDropdown() {
             <div className="cart-items">
                 {cart.map((item) => (
                     <div key={item.id} className="cart-item">
-                        <p>{item.title}</p><br/>
+                        <p>{item.title}</p><br />
                         <p>Price: £{item.price} x {item.quantity}</p>
                         <button onClick={() => removeFromCart(item.id)}>Remove</button>
                     </div>
