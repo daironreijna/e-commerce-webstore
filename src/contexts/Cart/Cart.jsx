@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useCart } from "../../contexts/CartContext.jsx";
+import { useCart } from "../CartContext.jsx";
 import { Link } from "react-router-dom";
-import './cart.css';
+import './Cart.css';
 
 function CartPage() {
     const { cart, removeFromCart, updateCartItemQuantity } = useCart();
@@ -40,7 +40,7 @@ function CartPage() {
 
     return (
         <div className="cart-page">
-           
+
 
             <div className="cart-items">
                 {cart.map((item) => (
@@ -96,7 +96,7 @@ function CartPage() {
                     <Link to="/">Back to Shop</Link>
                 </div>
             </div>
-    
+
         </div>
     );
 }
