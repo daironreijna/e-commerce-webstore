@@ -6,7 +6,7 @@ import { Shop } from "./Pages/Shop/Shop.jsx";/* Import components */
 import { CartProvider } from './contexts/CartContext.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Footer from './Components/Footer/Footer.jsx';
-import { Login } from './Pages/Loginsignup.jsx';
+import { Login } from './Pages/LoginSignUp.jsx';
 
 /* Import CSS */
 import './App.css';

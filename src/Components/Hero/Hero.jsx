@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Link } from 'react-router-dom';
-import SearchForm from '../Searchbar/Searchbar'
+import SearchForm from '../Searchbar/SearchBar'
 import { SearchResultsList } from '../Searchbar/SearchResultsList';
 
 const Hero = () => {
