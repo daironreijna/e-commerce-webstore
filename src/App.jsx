@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 /* Import pages */
-import Cart from './Pages/Cart/cart.jsx';
-import {Shop} from "./Pages/Shop/shop.jsx";/* Import components */
+import CartPage from "/src/contexts/Cart/Cart.jsx";
+import { Shop } from "./Pages/Shop/Shop.jsx";/* Import components */
 import { CartProvider } from './contexts/CartContext.jsx';
-import Navbar from './Components/Navbar/navbar.jsx';
+import Navbar from './Components/Navbar/Navbar.jsx';
 import Footer from './Components/Footer/Footer.jsx';
-import {Login} from './Pages/loginsignup.jsx';
+import { Login } from './Pages/LoginSignUp.jsx';
 
 /* Import CSS */
 import './App.css';
+
 export default function App() {
     return (
         <div className="overflow-hidden">
@@ -18,10 +19,10 @@ export default function App() {
                     <Navbar /> {/* Place Navbar outside of the Routes */}
                     <Routes>
                         <Route path="/" element={<Shop />} />
-                        <Route path="/cart" element={<Cart />} />
+                        <Route path="/cart" element={<CartPage />} />
                         <Route path="/login" element={<Login />} />
                     </Routes>
-                    <Footer/>
+                    <Footer />
                 </Router>
             </CartProvider>
         </div>

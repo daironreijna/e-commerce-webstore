@@ -1,9 +1,9 @@
-import React from "react";  
-import {Link} from "react-router-dom";
-import "../index.css";
+import React from "react";
+import { Link } from "react-router-dom";
+import "../Index.css";
 
 export const Login = () => {
-    return (
+  return (
     /* <!--User Login Section--> */
     <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
       <div className="md:w-1/3 max-w-sm">
@@ -59,5 +59,5 @@ export const Login = () => {
         </div>
       </div>
     </section>
-        )
+  )
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import CartPage from "../../Pages/Cart/cart.jsx";
+// import { CartPage } from "../../contexts/Cart/Cart.jsx";
 import { useCart } from "../../contexts/CartContext.jsx";
-import './item.css';
+import './Item.css';
 
 function WomenProducts() {
     const [womensproducts, setWomensproducts] = useState([]);
